@@ -28,10 +28,3 @@ There is no native mobile app but the web wallet contains a Progressive Web App 
 Thanks for your interest in contributing! There are many ways to contribute to this project. [Get started here at CONTRIBUTING.md](CONTRIBUTING.md).
 
 If you want to know how to setup the development environment head over to [DEVELOPMENT.md](DEVELOPMENT.md).
-
-## Donations
-
-If you have found FastFeelessBitcoin-Wallet useful and are feeling generous, you can donate at
-`nano_3niceeeyiaa86k58zhaeygxfkuzgffjtwju9ep33z9c8qekmr3iuc95jbqc8`
-
-Thanks a lot!
