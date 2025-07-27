@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1753632464231,
+  "timestamp": 1753632668714,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/cpupow.1b0c7179f5d0d4bc.worker.js",
         "/index.html",
-        "/main.06813750cf753682.js",
+        "/main.cbbb606049bf0147.js",
         "/manifest.webmanifest",
         "/polyfills.6ff8b11604869675.js",
         "/runtime.862c2f6681c6a7ad.js",
@@ -267,8 +267,8 @@
     "/cpupow.1b0c7179f5d0d4bc.worker.js": "2d8ac5de31b8bbdad4a3118f49e1b4397a559f44",
     "/fbtc_logo.5a805f1b6ebbedd6.png": "e8283b65a9e3a57dd6a5f01a5f61cde9ab74d1b7",
     "/fbtc_symbol.982addd96c4b952a.png": "1c3ed51e031734c6edca4cb113a83702e12cb384",
-    "/index.html": "39196130d1deebc3c15129d2462106d2d0176bbe",
-    "/main.06813750cf753682.js": "69c3a6d5f9374e13042b20aa24250c984065805a",
+    "/index.html": "4ca1fa7872186109f8359450b6c040a088b287b1",
+    "/main.cbbb606049bf0147.js": "1dc85a62be48420565fa16d912191751c2b0797c",
     "/manifest.webmanifest": "fb9ce0116a92808e43c4203fa61fdcb255708437",
     "/montserrat-v15-latin-300.169464b41fd5a6ed.woff2": "cf6855b4b8fd9b7fc4d7adecd97080a70ad75c23",
     "/montserrat-v15-latin-300.1fb23400394501d6.eot": "79ffc50c09de54d30478eb89c6984bbcb41ba5f9",
