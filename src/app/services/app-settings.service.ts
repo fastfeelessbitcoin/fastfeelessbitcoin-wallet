@@ -9,7 +9,7 @@ export type LedgerConnectionType = 'usb'|'bluetooth';
 interface AppSettings {
   language: string;
   displayDenomination: string;
-  //displayPrefix: string | null;
+  displayPrefix: string | null;
   walletStore: string;
   displayCurrency: string;
   defaultRepresentative: string | null;
@@ -38,7 +38,7 @@ export class AppSettingsService {
   settings: AppSettings = {
     language: null,
     displayDenomination: 'mnano',
-    //displayPrefix: 'fbtc',
+    displayPrefix: 'fbtc',
     walletStore: 'localStorage',
     displayCurrency: 'USD',
     defaultRepresentative: null,
@@ -70,7 +70,14 @@ export class AppSettingsService {
       auth: null,
       shouldRandom: false,
     },
-
+    {
+      name: 'FastFeelessBitcoin',
+      value: 'fastfeelessbitcoin',
+      api: 'https://api.fastfeelessbitcoin.com/api',
+      ws: 'wss://ws.fastfeelessbitcoin.com/ws',
+      auth: null,
+      shouldRandom: true,
+    },
     {
       name: 'Custom',
       value: 'custom',
