@@ -259,8 +259,8 @@ export class SweeperComponent implements OnInit {
       const block = nanocurrency.createBlock(privKey, {balance: '0', representative: this.representative,
       work: work, link: this.destinationAccount, previous: previous});
       // replace xrb with nano (old library)
-      block.block.account = block.block.account.replace('nano', 'kti');
-      block.block.link_as_account = block.block.link_as_account.replace('nano', 'kti');
+      block.block.account = block.block.account.replace('nano', 'fbtc');
+      block.block.link_as_account = block.block.link_as_account.replace('nano', 'fbtc');
 
       // publish block for each iteration
       const data = await this.api.process(block.block, TxType.send);
@@ -272,8 +272,8 @@ export class SweeperComponent implements OnInit {
           this.totalSwept = this.util.big.add(this.totalSwept, nanoAmountSent);
         }
         this.notificationService.sendInfo('Account ' + address + ' was swept and ' +
-        (nanoAmountSent ? ( 'KTI' + nanoAmountSent.toString(10) ) : '') + ' transferred to ' + this.destinationAccount, {length: 15000});
-        this.appendLog('Funds transferred ' + (nanoAmountSent ? ('(KTI' + nanoAmountSent.toString(10) + ')') : '') + ': ' + data.hash);
+        (nanoAmountSent ? ( 'FBTC' + nanoAmountSent.toString(10) ) : '') + ' transferred to ' + this.destinationAccount, {length: 15000});
+        this.appendLog('Funds transferred ' + (nanoAmountSent ? ('(FBTC' + nanoAmountSent.toString(10) + ')') : '') + ': ' + data.hash);
         console.log(this.adjustedBalance + ' raw transferred to ' + this.destinationAccount);
       } else {
         this.notificationService.sendWarning(`Failed processing block.`);
@@ -308,9 +308,9 @@ export class SweeperComponent implements OnInit {
       // create the block with the work found
       const block = nanocurrency.createBlock(this.privKey, {balance: this.adjustedBalance, representative: this.representative,
       work: work, link: key, previous: this.previous});
-      // replace kti with nano (old library)
-      block.block.account = block.block.account.replace('nano', 'kti');
-      block.block.link_as_account = block.block.link_as_account.replace('nano', 'kti');
+      // replace fbtc with nano (old library)
+      block.block.account = block.block.account.replace('nano', 'fbtc');
+      block.block.link_as_account = block.block.link_as_account.replace('nano', 'fbtc');
       // new previous
       this.previous = block.hash;
 
@@ -379,8 +379,8 @@ export class SweeperComponent implements OnInit {
         raw = this.util.big.add(raw, data.blocks[key].amount);
       }.bind(this));
       const nanoAmount = this.util.nano.rawToMnano(raw);
-      const pending = {count: Object.keys(data.blocks).length, raw: raw, KTI: nanoAmount, blocks: data.blocks};
-      const row = 'Found ' + pending.count + ' pending containing total ' + pending.KTI + ' KTI';
+      const pending = {count: Object.keys(data.blocks).length, raw: raw, FBTC: nanoAmount, blocks: data.blocks};
+      const row = 'Found ' + pending.count + ' pending containing total ' + pending.FBTC + ' FBTC';
       this.appendLog(row);
 
       // create receive blocks for all pending

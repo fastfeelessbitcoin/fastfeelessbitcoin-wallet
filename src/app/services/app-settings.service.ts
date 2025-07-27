@@ -38,7 +38,7 @@ export class AppSettingsService {
   settings: AppSettings = {
     language: null,
     displayDenomination: 'mnano',
-    //displayPrefix: 'kti',
+    //displayPrefix: 'fbtc',
     walletStore: 'localStorage',
     displayCurrency: 'USD',
     defaultRepresentative: null,
@@ -185,7 +185,7 @@ export class AppSettingsService {
     this.settings = {
       language: 'en',
       displayDenomination: 'mnano',
-      // displayPrefix: 'kti',
+      // displayPrefix: 'fbtc',
       walletStore: 'localStorage',
       displayCurrency: 'USD',
       defaultRepresentative: null,

@@ -1,9 +1,9 @@
-# KOTAI Development
+# FastFeelessBitcoin Development
 
 ## Application Structure
 
-- [KOTAI](https://github.com/kotaicurrency/kotai-wallet) - The main wallet application (UI + Seed Generation/Block Signing/Etc).
-- Communication with the network is done via KOTAI RPC and Websocket protocols, private or public on any KOTAI network.
+- [FastFeelessBitcoin](https://github.com/fastfeelessbitcoin/fbtc-wallet) - The main wallet application (UI + Seed Generation/Block Signing/Etc).
+- Communication with the network is done via FastFeelessBitcoin RPC and Websocket protocols, private or public on any FastFeelessBitcoin network.
 
 ## Development Prerequisites
 - [NodeJS](https://nodejs.org) v16.x + NPM v8.x
@@ -12,8 +12,8 @@
 ## Development Guide
 #### Clone repository and install dependencies
 ```bash
-git clone https://github.com/kotaicurrency/kotai-wallet
-cd KOTAI-Wallet
+git clone https://github.com/fastfeelessbitcoin/fbtc-wallet
+cd FastFeelessBitcoin-Wallet
 npm install
 ```
 

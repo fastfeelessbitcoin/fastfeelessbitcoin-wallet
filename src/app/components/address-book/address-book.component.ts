@@ -28,8 +28,7 @@ export interface BalanceAccount {
 
 export class AddressBookComponent implements OnInit, AfterViewInit, OnDestroy {
 
-  //nano = 1000000000000000000000000;
-  nano = 1000000000000000000;
+  nano = 1000000000000000000000000;
   activePanel = 0;
   creatingNewEntry = false;
 
@@ -287,7 +286,7 @@ export class AddressBookComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     // Remove spaces and convert to nano prefix
-    this.newAddressAccount = this.newAddressAccount.replace(/ /g, '').replace('nano_', 'kti_');
+    this.newAddressAccount = this.newAddressAccount.replace(/ /g, '').replace('nano_', 'fbtc_');
 
     // If the name has been changed, make sure no other entries are using that name
     if ( (this.newAddressName !== this.previousAddressName) && this.addressBookService.nameExists(this.newAddressName) ) {
@@ -389,7 +388,7 @@ export class AddressBookComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   exportAddressBookToFile() {
-    const fileName = `KOTAI-AddressBook.json`;
+    const fileName = `FastFeelessBitcoin-AddressBook.json`;
 
     const exportData = this.addressBookService.addressBook;
     this.triggerFileDownload(fileName, exportData);
@@ -409,7 +408,7 @@ export class AddressBookComponent implements OnInit, AfterViewInit, OnDestroy {
       try {
         const importData = JSON.parse(fileData);
         if (!importData.length || (!importData[0].account && !importData[0].address)) {
-          return this.notificationService.sendError(this.translocoService.translate('address-book.bad-import-data-make-sure-you-selected-a-kotai-wallet-address-book'));
+          return this.notificationService.sendError(this.translocoService.translate('address-book.bad-import-data-make-sure-you-selected-a-fbtc-wallet-address-book'));
         }
 
         const encoded = btoa(this.toBinary(JSON.stringify(importData)));

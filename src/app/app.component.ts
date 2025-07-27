@@ -119,7 +119,7 @@ export class AppComponent implements OnInit {
 
     await this.walletService.reloadBalances();
 
-    // Workaround fix for github pages when KOTAI-Wallet is refreshed (or externally linked) and there is a subpath for example to the send screen.
+    // Workaround fix for github pages when FastFeelessBitcoin-Wallet is refreshed (or externally linked) and there is a subpath for example to the send screen.
     // This data is saved from the 404.html page
     const path = localStorage.getItem('path');
 
@@ -184,7 +184,7 @@ export class AppComponent implements OnInit {
     // Notify user after service worker was updated
     this.updates.activated.subscribe((event) => {
       console.log(`SW update successful. Current: ${event.current.hash}`);
-      this.notifications.sendSuccess('KOTAI-Wallet was updated successfully.');
+      this.notifications.sendSuccess('FastFeelessBitcoin-Wallet was updated successfully.');
     });
 
     // Check how long the wallet has been inactive, and lock it if it's been too long
@@ -204,8 +204,8 @@ export class AppComponent implements OnInit {
       if (!this.settings.settings.serverAPI) return;
       await this.updateFiatPrices();
     } catch (err) {
-      //this.notifications.sendWarning(`There was an issue retrieving latest KOTAI price.  Ensure your AdBlocker is disabled on this page then reload to see accurate FIAT values.`, { length: 0, identifier: `price-adblock` });
-      this.notifications.sendWarning(`There is no price for KOTAI yet.`, { length: 0, identifier: `price-adblock` });
+      //this.notifications.sendWarning(`There was an issue retrieving latest FastFeelessBitcoin price.  Ensure your AdBlocker is disabled on this page then reload to see accurate FIAT values.`, { length: 0, identifier: `price-adblock` });
+      this.notifications.sendWarning(`There is no price for FastFeelessBitcoin yet.`, { length: 0, identifier: `price-adblock` });
     }
   }
 
@@ -223,14 +223,14 @@ export class AppComponent implements OnInit {
   }
 
   /*
-    This is important as it looks through saved data using hardcoded kti_ prefixes
+    This is important as it looks through saved data using hardcoded fbtc_ prefixes
     (Your wallet, address book, rep list, etc) and updates them to nano_ prefix for v19 RPC
    */
   async patchXrbToNanoPrefixData() {
     // If wallet is version 2, data has already been patched.  Otherwise, patch all data
     if (this.settings.settings.walletVersion >= 2) return;
 
-    await this.walletService.patchOldSavedData(); // Change saved kti_ addresses to nano_
+    await this.walletService.patchOldSavedData(); // Change saved fbtc_ addresses to nano_
     this.addressBook.patchXrbPrefixData();
     this.representative.patchXrbPrefixData();
 
@@ -306,7 +306,7 @@ export class AppComponent implements OnInit {
     if (!searchData.length) return;
 
     const isValidNanoAccount = (
-        ( searchData.startsWith('kti_') || searchData.startsWith('xrb_') || searchData.startsWith('nano_') )
+        ( searchData.startsWith('fbtc_') || searchData.startsWith('xrb_') || searchData.startsWith('nano_') )
       && this.util.account.isValidAccount(searchData)
     );
 
@@ -325,7 +325,7 @@ export class AppComponent implements OnInit {
       return;
     }
 
-    this.notifications.sendWarning(`Invalid KOTAI address or block hash! Please double check your input`);
+    this.notifications.sendWarning(`Invalid FastFeelessBitcoin address or block hash! Please double check your input`);
   }
 
   updateIdleTime() {
@@ -338,7 +338,7 @@ export class AppComponent implements OnInit {
       return;
     }
     this.walletService.reloadBalances();
-    this.notifications.sendInfo(`Attempting to reconnect to KOTAI node`);
+    this.notifications.sendInfo(`Attempting to reconnect to FastFeelessBitcoin node`);
   }
 
   async updateFiatPrices() {

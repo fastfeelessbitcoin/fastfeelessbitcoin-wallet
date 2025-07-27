@@ -13,7 +13,7 @@ const nacl = window['nacl'];
 @Injectable()
 export class NanoBlockService {
   representativeAccounts = [
-    'kti_11tuuo37eucdkwsgn4gngd88j7o3c36sme7fbby9q5uwxdswq919xy8uwgku', // KOTAI
+    'fbtc_16pahgxc7efumbnahotqzayki4s8qpczpnmnutptxu9wwscbe3uxucrsko1p', // FastFeelessBitcoin
 
   ];
 

@@ -40,7 +40,7 @@ export class AddressBookService {
 
     const newAddressBook = addressBook.map(entry => {
       if (entry.account.indexOf('nano_') !== -1) {
-        entry.account = entry.account.replace('nano_', 'kti_');
+        entry.account = entry.account.replace('nano_', 'fbtc_');
       }
       return entry;
     });

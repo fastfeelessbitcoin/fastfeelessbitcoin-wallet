@@ -376,7 +376,7 @@ export class RepresentativeService {
 
     const newRepList = list.map(entry => {
       if (entry.id.indexOf('nano_') !== -1) {
-        entry.id = entry.id.replace('nano_', 'kti_');
+        entry.id = entry.id.replace('nano_', 'fbtc_');
       }
       return entry;
     });
@@ -456,8 +456,8 @@ export class RepresentativeService {
   // eslint-disable-next-line @typescript-eslint/member-ordering
   defaultRepresentatives = [
     {
-      id: 'kti_11tuuo37eucdkwsgn4gngd88j7o3c36sme7fbby9q5uwxdswq919xy8uwgku',
-      name: 'KOTAI',
+      id: 'fbtc_16pahgxc7efumbnahotqzayki4s8qpczpnmnutptxu9wwscbe3uxucrsko1p',
+      name: 'FastFeelessBitcoin',
     },
 
   ];

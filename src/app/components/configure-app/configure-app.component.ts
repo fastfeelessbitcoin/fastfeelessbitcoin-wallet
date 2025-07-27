@@ -47,7 +47,7 @@ export class ConfigureAppComponent implements OnInit {
   selectedLanguage = this.languages[0].id;
 
   denominations = [
-    { name: 'KTI', value: 'mnano' },
+    { name: 'FBTC', value: 'mnano' },
     { name: 'knano', value: 'knano' },
     { name: 'nano', value: 'nano' },
   ];
@@ -155,7 +155,7 @@ export class ConfigureAppComponent implements OnInit {
   selectedDecentralizedAliasesOption = this.decentralizedAliasesOptions[0].value;
 
   prefixOptions = [
-     { name: 'kti', value: 'kti' },
+     { name: 'fbtc', value: 'fbtc' },
      { name: 'xrb_', value: 'xrb' },
      { name: 'nano_', value: 'nano' },
      ];
@@ -627,7 +627,7 @@ export class ConfigureAppComponent implements OnInit {
 
       this.notifications.sendSuccess(this.translocoService.translate('configure-app.clear-all-data.successfully-deleted-locally-stored-data-and-reset-the'));
 
-      // Get a new random API server or KOTAI-Wallet will get stuck in offline mode
+      // Get a new random API server or FastFeelessBitcoin-Wallet will get stuck in offline mode
       this.updateServerSettings();
     } catch (err) {}
   }
