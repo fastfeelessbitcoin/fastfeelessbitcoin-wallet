@@ -488,7 +488,7 @@ export class SendComponent implements OnInit {
     );
 
     if (!this.addressBookMatch && this.toAccountID === environment.donationAddress) {
-      this.addressBookMatch = 'Nault Donations';
+      this.addressBookMatch = 'FBTC Main';
     }
 
     // const accountInfo = await this.walletService.walletApi.accountInfo(this.toAccountID);
