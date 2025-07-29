@@ -192,7 +192,7 @@ export class AppSettingsService {
     this.settings = {
       language: 'en',
       displayDenomination: 'mnano',
-      // displayPrefix: 'fbtc',
+      displayPrefix: 'fbtc',
       walletStore: 'localStorage',
       displayCurrency: 'USD',
       defaultRepresentative: null,
@@ -204,7 +204,7 @@ export class AppSettingsService {
       customWorkServer: '',
       pendingOption: 'amount',
       decentralizedAliasesOption: 'disabled',
-      serverName: 'random',
+      serverName: 'fastfeelessbitcoin',
       serverAPI: null,
       serverWS: null,
       serverAuth: null,
