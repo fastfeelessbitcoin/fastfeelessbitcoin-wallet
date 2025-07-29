@@ -51,7 +51,7 @@ export class AppSettingsService {
     customWorkServer: '',
     pendingOption: 'amount',
     decentralizedAliasesOption: 'disabled',
-    serverName: 'random',
+    serverName: 'fastfeelessbitcoin',
     serverAPI: null,
     serverWS: null,
     serverAuth: null,

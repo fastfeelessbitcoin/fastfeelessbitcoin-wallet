@@ -457,7 +457,7 @@ export class RepresentativeService {
   defaultRepresentatives = [
     {
       id: 'fbtc_16pahgxc7efumbnahotqzayki4s8qpczpnmnutptxu9wwscbe3uxucrsko1p',
-      name: 'FastFeelessBitcoin',
+      name: 'FBTC-Main-Rep',
     },
 
   ];
